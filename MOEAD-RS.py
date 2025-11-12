@@ -247,8 +247,8 @@ def main():
         count += 1
     
     print(f"user{user_id}")  
-    print(f"    RecLLM      Accuracy:{neutral_ind.f[0]}, Balance:{neutral_ind.f[1]}, Fairness:{neutral_ind.f[2]}")
-    print(f"    RecLLMOEA   Accuracy:{f1_sum/count}, Balance:{f2_sum/count}, WSRV:{f3_sum/count}, 前沿个体数:{count}")
+    print(f"    RecLLM      Accuracy:{neutral_ind.f[0]}, Balance:{neutral_ind.f[1]}, Correlation:{neutral_ind.f[2]}")
+    print(f"    RecLLMOEA   Accuracy:{f1_sum/count}, Balance:{f2_sum/count}, Correlation:{f3_sum/count}, num of Pareto Front:{count}")
     return neutral_ind.f, f1_sum/count,  f2_sum/count, f3_sum/count, count
 
 if __name__ == "__main__":
@@ -298,4 +298,5 @@ print()
 print(f"The average results for all users are as follows:")
 print(f"    RecLLM       Accuracy:{result_1['Accuracy']/n}, Balance:{result_1['Balance']/n},Correlation:{result_1['Correlation']/n}")
 print(f"    RecLLMOEA    Accuracy:{result_2['Accuracy']/n}, Balance:{result_2['Balance']/n},Correlation:{result_2['Correlation']/n}, num of Pareto Front:{result_2['num of Pareto Front']/n}")
+
  
